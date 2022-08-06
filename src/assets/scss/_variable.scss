@@ -1,0 +1,26 @@
+
+  $header_height: 3rem;
+  $font_semi: 600;
+  $hue_color: 224;
+  $first_color: hsl(var(--hue-color), 89%, 60%);
+  $second_color: hsl(var(--hue-color), 56%, 12%);
+
+  $body_font: 'Poppins', sans-serif;
+  $big_font_size: 2rem;
+  $h2_font_size: 1.25rem;
+  $normal_font_size: .938rem;
+  $smaller_font_size: .75rem;
+  $mb_2: 1rem;
+  $mb_4: 2rem;
+  $mb_5: 2.5rem;
+  $mb_6: 3rem;
+  $z_back: -10;
+  $z_fixed: 100;
+
+
+@media screen and (min-width: 968px){
+  $big_font_size: 3.5rem;
+  $h2_font_size: 2rem;
+  $normal_font_size: 1rem;
+  $smaller_font_size: .875rem;
+}

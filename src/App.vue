@@ -1,30 +1,45 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <Navigation/>
   <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+  import {Navigation} from '@/components'
 
-nav {
-  padding: 30px;
+  export default{
+    components: {
+      Navigation
+    },
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    mounted(){
+      this.scrollReveal(),
+      this.boxIcons(),
+      this.mainJS()
+    },
 
-    &.router-link-exact-active {
-      color: #42b983;
+    methods: {
+      scrollReveal(){
+        let scrollReveal = document.createElement('script')
+        scrollReveal.setAttribute('src', 'https://unpkg.com/scrollreveal')
+        document.head.appendChild(scrollReveal)
+      },
+      boxIcons(){
+        let boxIcons = document.createElement('link')
+        boxIcons.setAttribute('rel', 'stylesheet')
+        boxIcons.setAttribute('href', 'https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css')
+        document.head.appendChild(boxIcons)
+      },
+
+      mainJS(){
+        let scrollReveal = document.createElement('script')
+        scrollReveal.setAttribute('src', require('@/assets/js/_main.js'))
+        document.head.appendChild(scrollReveal)
+      }
     }
   }
-}
+</script>
+
+<style lang="scss">
+  @import "@/assets/scss/_variable.scss";
+  @import "@/assets/scss/_main.scss";
 </style>
