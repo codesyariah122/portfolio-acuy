@@ -12,17 +12,11 @@
     },
 
     mounted(){
-      this.scrollReveal(),
       this.boxIcons(),
       this.mainJS()
     },
 
     methods: {
-      scrollReveal(){
-        let scrollReveal = document.createElement('script')
-        scrollReveal.setAttribute('src', 'https://unpkg.com/scrollreveal')
-        document.head.appendChild(scrollReveal)
-      },
       boxIcons(){
         let boxIcons = document.createElement('link')
         boxIcons.setAttribute('rel', 'stylesheet')
@@ -30,10 +24,16 @@
         document.head.appendChild(boxIcons)
       },
 
+      scrollReveal(){
+        let scrollReveal = document.createElement('script')
+        scrollReveal.setAttribute('src', 'https://unpkg.com/scrollreveal')
+        document.body.appendChild(scrollReveal)
+      },
+
       mainJS(){
         let scrollReveal = document.createElement('script')
         scrollReveal.setAttribute('src', require('@/assets/js/_main.js'))
-        document.head.appendChild(scrollReveal)
+        document.body.appendChild(scrollReveal)
       }
     }
   }
