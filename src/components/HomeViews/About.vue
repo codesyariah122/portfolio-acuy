@@ -20,7 +20,7 @@
 			<div class="container gallery__about">
 				<div class="row justify-content-center">
 					<div class="col-lg-12 col-md-12 col-sm-12 mb-3">
-						<h2>Gallery</h2>
+						<h2>Gallery & History</h2>
 					</div>
 
 					<div class="col-lg-12 col-md-12 col-sm-12">
